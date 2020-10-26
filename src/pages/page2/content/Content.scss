@@ -1,0 +1,131 @@
+@import '../../../styles/variables.scss';
+
+
+.flex-box{
+  display: flex;
+}
+
+
+.container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 865px;
+
+  .content{
+    width: 400px;
+    height: 261px;
+
+    .title{
+      font-size: 40px;
+      letter-spacing: -1.67px;
+      line-height: 1;
+    }
+
+    .para{
+      color: $text-grey;
+
+      line-height: 20px;
+      letter-spacing: -0.25px;
+      font-size: 12px;
+      padding-top: 22px;
+      padding-bottom: 32px;
+    }
+
+    .shop-now{
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      transition: color .4s ease;
+
+      &:hover{
+        color: $text-grey;
+      }
+
+      &:hover + .rightArrow{
+        margin-left: 60px;
+        color: $text-grey;
+      }
+    }
+
+    .rightArrow{
+      display: inline-block;
+      width: 40px;
+      height: 12px;
+      background-image: url("../../../asset/images/rightArrow.svg");
+      margin-left: 43px;
+      transition: margin-left .4s ease;
+    }
+  }
+
+  .navigation{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 160px;
+    height: 80px;
+
+    .navigation-items{
+      display: flex;
+      align-items: center;
+      height: 80px;
+
+      .left-arrow{
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        background-color: $black;
+        transition: all .4s ease;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{
+          background-color: $btn-active;
+        }
+
+        &:hover > .leftNav{
+          margin-right: 5px;
+        }
+
+        .leftNav{
+          width: 12px;
+          height: 24px;
+          background-image: url("../../../asset/images/icon-angle-left.svg");
+          background-repeat: no-repeat;
+          transition: margin-right .4s ease;
+        }
+      }
+
+      .right-arrow{
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        background-color: $black;
+        transition: all .4s ease;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{
+          background-color: $btn-active;
+        }
+
+        &:hover > .rightNav{
+          margin-left: 5px;
+        }
+
+        .rightNav{
+          width: 12px;
+          height: 24px;
+          background-image: url("../../../asset/images/icon-angle-right.svg");
+          background-repeat: no-repeat;
+          transition: margin-left .4s ease;
+        }
+      }
+    }
+  }
+}
