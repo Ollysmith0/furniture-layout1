@@ -10,12 +10,17 @@ $desktop-breakpoint: 992px;
   } 
 }
 
-@mixin tablet { @media (max-width: #{$tablet-breakpoint - 1px}) {
+@mixin tablet { @media (min-width: #{$mobile-breakpoint + 1px}) and (max-width: #{$tablet-breakpoint}) {
   @content;
   } 
 }
 
-@mixin desktop { @media (max-width: #{$tablet-breakpoint + 1px}) {
+@mixin desktop { @media (min-width: #{$tablet-breakpoint + 1px}) {
+  @content;
+  } 
+}
+
+@mixin middle { @media (max-width: #{$tablet-breakpoint + 232px}) {
   @content;
   } 
 }

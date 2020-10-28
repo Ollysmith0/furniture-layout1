@@ -7,7 +7,7 @@ const PageOne = () => {
   return (
     <>
       <div className="page1" id="page1">
-        <div className="flex-box flex-box-m">
+        <div className="flex-box">
           <Sidebar />
           <Content />
         </div>

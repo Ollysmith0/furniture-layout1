@@ -10,8 +10,8 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact component={PageOne} />
-          <Route path="/page2" exact component={PageTwo} />
-          <Route path="/page3" exact component={PageThree} />
+          {/* <Route path="/page2" exact component={PageTwo} />
+          <Route path="/page3" exact component={PageThree} /> */}
         </Switch>
       </div>
     </Router>

@@ -10,25 +10,30 @@
 }
 
 .flex-box{
+  @include d-flex;
+
   @include mobile{
     @include d-block;
   }
-}
 
-.flex-box-m{
-  @include d-block;
-
-  @include mobile{
+  @include tablet{
     @include d-block;
   }
 
   .left1{
-    width: 840px;
+    width: 60%;
     height: auto;
+
     @include mobile{
       max-width: 480px;
       width: 100%;
       height: 360px;
+    }
+
+    @include tablet{
+      max-width: 768px;
+      width: 100%;
+      height: 488px;
     }
 
     .sidebar1{
@@ -36,8 +41,9 @@
       background-image: url('../../../asset/images/desktop-image-hero-1.jpg');
       background-size: auto;
       background-repeat: no-repeat;
-      width: 840px;
+      width: 100%;
       height: 534px;
+
       @include mobile{
         max-width: 480px;
         width: 100%;
@@ -45,11 +51,27 @@
         background-image: none;
       }
 
+      @include tablet{
+        max-width: 768px;
+        width: 100%;
+        height: 488px;
+        background-image: none;
+      }
+
       .imageDesktop1{
+        width: 100%;
+        height: 534px;
         @include absolute;
+
         @include mobile{
-          width: 100%;
+          max-width: 480px;
           height: 360px;
+        }
+
+        @include tablet{
+          max-width: 768px;
+          height: 488px;
+          width: 100%;
         }
       }
 
@@ -57,7 +79,7 @@
         @include absolute;
         width: 70%;
         z-index: 2;
-        padding: 64px 0 0 64px;
+        padding: 10% 5%;
 
         @include mobile{
           @include d-flex{
@@ -67,12 +89,32 @@
           width: 100%;
         }
 
+        @include tablet{
+          padding: 10% 5%;
+          width: 100%;
+        }
+
+        @include middle{
+          width: 100%;
+          padding: 10% 5%;
+        }
+
         .menu-btn{
+          @include d-none;
+
           margin: 10% 5%;
           width: 20px;
           height: 14px;
           cursor: pointer;
           transition: all .4s ease;
+
+          @include tablet{
+            @include d-none;
+          }
+
+          @include mobile{
+            @include d-block;
+          }
           
           &:hover{
             transform: scale(1.3);
@@ -83,8 +125,8 @@
           @include d-none;
 
           @include mobile{
-
             @include d-block;
+
             margin-left: 25%;
             color: $white;
             font-size: $font-size-title - 5px;
@@ -116,8 +158,16 @@
             transition: all .4s ease;
           }
 
+          @include tablet{
+            @include d-flex{
+              align-items: center;
+              justify-content: space-evenly;
+            }
+          }
+
           .room{
-            font-size: $font-size-title;
+            font-size: $font-size-title - 10px;
+            margin-bottom: 3px;
 
             @include mobile{
               background-image: url("../../../asset/images/icon-close.svg");
@@ -130,12 +180,26 @@
               white-space: nowrap;
               overflow: hidden;
               cursor: pointer;
-              transition: all .4s ease;
+              transition: transform .4s ease;
+
+              &:hover {
+                transform: rotate(180deg);
+              }
             }
 
-            &:hover {
-              transform: rotate(180deg);
+            @include tablet{
+              margin-right: 2rem;
+
+              a{
+                color: $white;
+                transition: all .4s ease;
+              }
+
+              a:hover{
+                color: $light-grey;
+              }
             }
+
           }
 
           .item{
@@ -184,12 +248,18 @@
       }
 
       .navigation{
+        @include d-none;
         @include absolute;
+
         z-index: 2;
         right: 0;
         bottom: 0;
         width: 120px;
         height: 60px;
+
+        @include tablet{
+          @include d-block;
+        }
 
         .navigation-items{
           @include d-flex{
@@ -283,14 +353,19 @@
   }
 
   .overlay2{
-    @include absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    @include d-none;
 
-    background-color: black;
-    opacity: 0;
+    @include mobile{
+      @include d-block;
+      @include absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      background-color: black;
+      opacity: 0;
+    }
   }
 }

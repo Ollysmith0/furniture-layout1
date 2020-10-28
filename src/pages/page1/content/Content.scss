@@ -8,26 +8,48 @@
     align-items: center;
   }
   @include relative;
-  width: 865px;
+  width: 40%;
 
   @include mobile{
     max-width: 480px;
+    width: 100%;
+    padding: 15% 5%;
+  }
+
+  @include tablet{
+    max-width: 768px;
+    width: 100%;
     padding: 15% 5%;
   }
 
   .content{
-    width: 400px;
-    height: 261px;
+    max-width: 80%;
+    height: auto;
+
+    @include middle{
+      max-width: 80%;
+      height: auto;
+    }
 
     @include mobile{
       max-width: 480px;
       width: 100%;
     }
 
+    @include tablet{
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+    }
+
     .title{
       font-size: $font-size-title-mobile;
       letter-spacing: -1.67px;
       line-height: 1;
+
+      @include tablet{
+        font-size: $font-size-title;
+      }
     }
 
     .para{
@@ -38,6 +60,11 @@
       font-size: $font-size;
       padding-top: 22px;
       padding-bottom: 32px;
+
+      @include tablet{
+        font-size: $font-size + 5px;
+        line-height: 25px;
+      }
     }
 
     .shop-now{
@@ -46,12 +73,20 @@
       letter-spacing: 10px;
       transition: color .4s ease;
 
+      @include tablet{
+        font-size: $font-size + 5px;
+      }
+
+      @include middle{
+        font-size: $font-size - 2px;
+      }
+
       &:hover{
         color: $text-grey;
       }
 
       &:hover + .rightArrow{
-        margin-left: 60px;
+        margin-left: 40px;
         color: $text-grey;
       }
     }
@@ -61,8 +96,13 @@
       width: 40px;
       height: 12px;
       background-image: url("../../../asset/images/rightArrow.svg");
-      margin-left: 43px;
+      margin-left: 23px;
       transition: margin-left .4s ease;
+
+      @include middle{
+        margin-left: 10px;
+        transition: margin-left .4s ease;
+      }
     }
   }
 
@@ -74,6 +114,10 @@
     height: 80px;
 
     @include mobile{
+      @include d-none;
+    }
+
+    @include tablet{
       @include d-none;
     }
 
