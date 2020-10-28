@@ -1,24 +1,25 @@
 @import '../../../styles/variables.scss';
-
-
-.flex-box{
-  display: flex;
-}
-
+@import '../../../styles/common.scss';
+@import '../../../styles/responsive.scss';
 
 .container{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include d-flex{
+    justify-content: center;
+    align-items: center;
+  }
+  @include relative;
   width: 865px;
+
+  @include mobile{
+    max-width: 480px;
+  }
 
   .content{
     width: 400px;
     height: 261px;
 
     .title{
-      font-size: 40px;
+      font-size: $font-size-title;
       letter-spacing: -1.67px;
       line-height: 1;
     }
@@ -28,7 +29,7 @@
 
       line-height: 20px;
       letter-spacing: -0.25px;
-      font-size: 12px;
+      font-size: $font-size;
       padding-top: 22px;
       padding-bottom: 32px;
     }
@@ -50,7 +51,7 @@
     }
 
     .rightArrow{
-      display: inline-block;
+      @include d-inline-block;
       width: 40px;
       height: 12px;
       background-image: url("../../../asset/images/rightArrow.svg");
@@ -60,15 +61,16 @@
   }
 
   .navigation{
-    position: absolute;
+    @include absolute;
     left: 0;
     bottom: 0;
     width: 160px;
     height: 80px;
 
     .navigation-items{
-      display: flex;
-      align-items: center;
+      @include d-flex{
+        align-items: center;
+      }
       height: 80px;
 
       .left-arrow{
@@ -78,9 +80,10 @@
         background-color: $black;
         transition: all .4s ease;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include d-flex{
+          justify-content: center;
+          align-items: center;
+        }
 
         &:hover{
           background-color: $btn-active;
@@ -106,9 +109,10 @@
         background-color: $black;
         transition: all .4s ease;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include d-flex{
+          justify-content: center;
+          align-items: center;
+        }
 
         &:hover{
           background-color: $btn-active;

@@ -6,7 +6,7 @@ import Footer from "../page1/footer/Footer";
 const PageOne = () => {
   return (
     <div className="page1">
-      <div className="flex-box">
+      <div className="flex-box flex-box-m">
         <Sidebar />
         <Content />
       </div>

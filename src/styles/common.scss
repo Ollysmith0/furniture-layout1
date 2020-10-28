@@ -1,0 +1,31 @@
+@import '../styles/variables.scss';
+
+@mixin d-flex {
+  display: flex;
+  @content;
+}
+
+@mixin d-inline-block{
+  display: inline-block;
+}
+
+@mixin d-block {
+  display: block;
+}
+
+@mixin d-none {
+  display: none;
+}
+
+@mixin d-contents {
+  display: contents;
+}
+
+@mixin relative {
+  position: relative;
+}
+
+@mixin absolute {
+  position: absolute;
+  @content;
+}

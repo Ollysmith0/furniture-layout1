@@ -1,16 +1,19 @@
 @import '../../../styles/variables.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/responsive.scss';
+
 
 .footer{
-  display: flex;
+  @include d-flex;
 
   .banner1{
-    position: relative;
+    @include relative;
     width: 30%;
     height: auto;
     cursor: pointer;
 
     .overlay1{
-      position: absolute;
+      @include absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -34,9 +37,10 @@
   .producing{
     width: 40%;
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include d-flex{
+      align-items: center;
+      justify-content: center;
+    }
 
     .content{
       width: 484px;
@@ -62,13 +66,13 @@
   }
 
   .banner2{
-    position: relative;
+    @include relative;
     width: 30%;
     height: auto;
     cursor: pointer;
 
     .overlay2{
-      position: absolute;
+      @include absolute;
       top: 0;
       left: 0;
       width: 100%;
