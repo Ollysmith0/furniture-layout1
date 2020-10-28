@@ -5,18 +5,12 @@ import imageDesktop from "../../../asset/images/desktop-image-hero-1.jpg";
 import menuBtn from "../../../asset/images/icon-hamburger.svg";
 
 import "../side-bar/Sidebar.scss";
+import openMenu from "./openMenu";
+import closeMenu from "./closeMenu";
 
 const Sidebar = () => {
-  useEffect(() => {
-    document.getElementById("menu-btn").onclick = () => {
-      document.getElementById("nav-menu").classList.add("list-m");
-    };
-    document.getElementById("close-btn").onclick = () => {
-      document.getElementById("nav-menu").classList.remove("list-m");
-    };
-  });
   return (
-    <div className="left1">
+    <div className="left1" id="side-bar">
       <div className="sidebar1">
         <img src={imageDesktop} alt="imageDesktop" className="imageDesktop1" />
         <div className="overlay"></div>
@@ -30,16 +24,17 @@ const Sidebar = () => {
             </div>
           </div>
         </div>
-        <div className="menu">
+        <div className="menu" id="menu">
           <img
             src={menuBtn}
             alt="menu-btn"
             className="menu-btn"
             id="menu-btn"
+            onClick={openMenu}
           />
           <h3 className="room-m">room</h3>
           <ul className="list" id="nav-menu">
-            <li className="room" id="close-btn">
+            <li className="room" id="close-btn" onClick={closeMenu}>
               <a href="#">room</a>
             </li>
             <li className="item">

@@ -5,13 +5,16 @@ import Footer from "../page1/footer/Footer";
 
 const PageOne = () => {
   return (
-    <div className="page1">
-      <div className="flex-box flex-box-m">
-        <Sidebar />
-        <Content />
+    <>
+      <div className="page1" id="page1">
+        <div className="flex-box flex-box-m">
+          <Sidebar />
+          <Content />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+      <div className="overlay2" id="overlay2"></div>
+    </>
   );
 };
 

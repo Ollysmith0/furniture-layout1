@@ -1,16 +1,25 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/common.scss';
 @import '../../../styles/responsive.scss';
+@import '../../../styles/reset.scss';
 
 
 .footer{
   @include d-flex;
+
+  @include mobile{
+    @include d-block;
+  }
 
   .banner1{
     @include relative;
     width: 30%;
     height: auto;
     cursor: pointer;
+
+    @include mobile{
+      width: 100%;
+    }
 
     .overlay1{
       @include absolute;
@@ -42,9 +51,19 @@
       justify-content: center;
     }
 
+    @include mobile{
+      width: 100%;
+      padding: 15% 5%;
+    }
+
     .content{
       width: 484px;
       height: 131px;
+
+      @include mobile{
+        max-width: 480px;
+        width: 100%;
+      }
     }
 
     .title{

@@ -68,7 +68,7 @@
         }
 
         .menu-btn{
-          margin: 3rem 2rem;
+          margin: 10% 5%;
           width: 20px;
           height: 14px;
           cursor: pointer;
@@ -85,7 +85,7 @@
           @include mobile{
 
             @include d-block;
-            margin-left: 3rem;
+            margin-left: 25%;
             color: $white;
             font-size: $font-size-title - 5px;
             cursor: pointer;
@@ -111,7 +111,6 @@
             width: 100%;
             height: 0;
             opacity: 0;
-            padding-right: 20px;
 
             background-color: $white;
             transition: all .4s ease;
@@ -179,14 +178,14 @@
         }
 
         .list-m {
-          height: 60%;
+          height: 63%;
           opacity: 1;
         }
       }
 
       .navigation{
         @include absolute;
-        z-index: 3;
+        z-index: 2;
         right: 0;
         bottom: 0;
         width: 120px;
@@ -271,5 +270,27 @@
         opacity: 0.2;
       }
     }
+  }
+}
+
+.App{
+  .page1{
+      @include mobile{
+      @include absolute{
+        z-index: auto;
+      }
+    }
+  }
+
+  .overlay2{
+    @include absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background-color: black;
+    opacity: 0;
   }
 }
