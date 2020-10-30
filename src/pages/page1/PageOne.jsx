@@ -3,7 +3,7 @@ import Sidebar from "../page1/side-bar/Sidebar";
 import Content from "../page1/content/Content";
 import Footer from "../page1/footer/Footer";
 
-const PageOne = () => {
+const PageOne = (props) => {
   return (
     <>
       <div className="page1" id="page1">
@@ -13,7 +13,7 @@ const PageOne = () => {
         </div>
         <Footer />
       </div>
-      <div className="overlay2" id="overlay2"></div>
+      <div className="overlay3" id="overlay3"></div>
     </>
   );
 };

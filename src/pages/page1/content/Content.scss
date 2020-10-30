@@ -46,14 +46,19 @@
       font-size: $font-size-title-mobile;
       letter-spacing: -1.67px;
       line-height: 1;
+      opacity: .9;
+      transition: all .4s ease;
 
       @include tablet{
         font-size: $font-size-title;
+        transition: all .4s ease;
       }
     }
 
     .para{
       color: $text-grey;
+      opacity: .9;
+      transition: all .4s ease;
 
       line-height: 20px;
       letter-spacing: -0.25px;
@@ -64,6 +69,7 @@
       @include tablet{
         font-size: $font-size + 5px;
         line-height: 25px;
+        transition: all .4s ease;
       }
     }
 

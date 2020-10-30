@@ -27,7 +27,7 @@
     @include mobile{
       max-width: 480px;
       width: 100%;
-      height: 360px;
+      height: 534px;
     }
 
     @include tablet{
@@ -38,7 +38,6 @@
 
     .sidebar1{
       @include relative;
-      background-image: url('../../../asset/images/desktop-image-hero-1.jpg');
       background-size: auto;
       background-repeat: no-repeat;
       width: 100%;
@@ -47,38 +46,56 @@
       @include mobile{
         max-width: 480px;
         width: 100%;
-        height: 360px;
+        height: 534px;
         background-image: none;
       }
 
       @include tablet{
         max-width: 768px;
         width: 100%;
-        height: 488px;
+        height: 534px;
         background-image: none;
       }
 
       .imageDesktop1{
         width: 100%;
-        height: 534px;
+        height: 534px;  
         @include absolute;
+        transform: scale(1);
+        transition: all .4s ease;
 
         @include mobile{
           max-width: 480px;
-          height: 360px;
+          height: 534px;
         }
 
         @include tablet{
           max-width: 768px;
-          height: 488px;
+          height: 534px;
           width: 100%;
         }
+      }
+
+      .imageDesktop2 {
+        width: 100%;
+        height: 534px;
+        @include absolute;
+        transform: scale(.9);
+        transition: all .4s ease;
+      }
+      
+      .imageDesktop3 {
+        width: 100%;
+        height: 534px;
+        @include absolute;
+        transform: scale(.9);
+        transition: all .4s ease;
       }
 
       .menu{
         @include absolute;
         width: 70%;
-        z-index: 2;
+        z-index: 5;
         padding: 10% 5%;
 
         @include mobile{
@@ -187,6 +204,14 @@
               }
             }
 
+            a{
+              transition: all .4s ease;
+            }
+
+            &:hover a{
+              color: $light-grey;
+            }
+
             @include tablet{
               margin-right: 2rem;
 
@@ -210,6 +235,8 @@
             }
 
             a{
+              cursor: pointer;
+
               @include mobile{
                 color: $black;
                 @include relative;
@@ -258,6 +285,10 @@
         height: 60px;
 
         @include tablet{
+          @include d-block;
+        }
+
+        @include mobile{
           @include d-block;
         }
 
@@ -352,7 +383,7 @@
     }
   }
 
-  .overlay2{
+  .overlay3{
     @include d-none;
 
     @include mobile{
